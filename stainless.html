@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Vipul Website -->
+  <title>Madoc </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #f4511e;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+         <li><a href="index.html">ABOUT</a></li>
+        <li><a href="index.html#services">MISSION</a></li>
+        <li><a href="index.html#portfolio">INDUSTRIES</a></li>
+        <li><a href="index.html#pricing">PRODUCTS</a></li>
+        <li><a href="index.html#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Madoc Engineering Company</h1> 
+  <p>We specialize in Welding Equipments</p> 
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Sign In</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+
+<b><h1 style="text-align:center;">Stainless Steel Electrode</h1></b>
+<!-----table----->
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Seriel No.</th>
+      <th scope="col">Product Code</th>
+      <th scope="col">Aws</th>
+      <th scope="col">Description</th>
+       <th scope="col">catalogue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>TC-601</td>
+      <td>AWS/ASME A5.4 E 307-16</td>
+      <td>Premium basic coated electrode for disimilar metal welding on manganese steel to carbon steel castings or forgings.  </td>
+              <td><a href="tc-601.jpeg">TC-601</a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>TC-602</td>
+      <td>AWS/ASME A5.4 E 307-26</td>
+      <td>Mild steel core wire for standing higher welding current and heat. More higher Mn content than 308. </td>
+          <td><a href="tc-602.jpeg">TC-602</a></td>
+    </tr>
+         <tr>
+      <th scope="row">3</th>
+      <td>TC-603</td>
+      <td>Proprietory Product</td>
+      <td>Electrode for high strength joining of low-medium carbon and low alloy steel including a non steel.</td>
+      <td><a href="tc-603.jpeg">TC-603</a></td>
+    </tr>
+      <tr>
+      <th scope="row">4</th>
+      <td>TC-604</td>
+      <td>Proprietory Product</td>
+      <td>Excellent electrode for joining unknown stainless steel and dissimilar steel composition operating at higher tempratures.</td>
+       <td><a href="tc-604.jpeg">TC-604 </a></td>
+    </tr>
+          <tr>
+      <th scope="row">5</th>
+      <td>TC-605</td>
+      <td>AWS/ASME A5.4 E 308-16</td>
+      <td>Lime titanium oxide type stainless steel covered electrode. Excellent for welding 19CR-9NI steels.</td>
+       <td><a href="tc-605.jpeg">TC-605</a></td>
+    </tr>
+        <tr>
+      <th scope="row">6</th>
+      <td>TC-606</td>
+      <td>Proprietory Product</td>
+      <td>Premium stainless steel maintainance and repair electrode for welding molybdemum bearing stainless steels.</td>
+       <td><a href="tc-606.jpeg">TC-606</a></td>
+    </tr>
+          <tr>
+      <th scope="row">7</th>
+      <td>TC-607</td>
+      <td>AWS/ASME A5.4 E 308L-16</td>
+      <td>Low carbon lime titanium oxide type covered electrode for low carbon content stainless steel suitable for welding of 18CR-8NI stainless steel. </td>
+              <td><a href="tc-607.jpeg">TC-607</a></td>
+    </tr>
+          <tr>
+      <th scope="row">8</th>
+      <td>TC-608</td>
+      <td>AWS/ASME A5.4 E 308L-15</td>
+      <td>Basic coating of stainless steel electrode has outstanding welding performance for vertical and overhead position. Electrode for welding 18CR-8NI steels</td>
+       <td><a href="tc-608.jpeg">TC-608</a></td>
+    </tr>
+        <tr>
+      <th scope="row">9</th>
+      <td>TC-609</td>
+      <td>Proprietory Product</td>
+      <td>Low heat input, low carbon stainless steel electrode with excellent strength and corrosion resistance for joining and overlay.</td>
+       <td><a href="tc-609.jpeg">TC-609</a></td>
+    </tr>
+         <tr>
+      <th scope="row">10</th>
+      <td>TC-610</td>
+      <td>AWS/ASME A5.4 E 309-16</td>
+      <td>All deposit weld metal contains approx 23CR-13NI elements stainless steel covered electrodes good heat and corrosion resistance.</td>
+       <td><a href="tc-610.jpeg">TC-610</a></td>
+    </tr>
+         <tr>
+      <th scope="row">11</th>
+      <td>TC-611</td>
+      <td>AWS/ASME A5.4 E 309L-16</td>
+      <td>Low carbon content stainless steel welding of carbon steel or other high harderning alloy steel to stainless steel good heat and corrosion resistance.</td>
+       <td><a href="tc-611.jpeg">TC-611</a></td>
+    </tr> 
+          <tr>
+      <th scope="row">12</th>
+      <td>TC-612</td>
+      <td>AWS/ASME A5.4 E 309LMo-16</td>
+      <td>Low carbon content with 25CR-13NI-2.5Mo weld deposit has excellent resistance to oxidation and scaling upto 1100*c welding of 316-316L stainless steel to carbon steel or low alloy steel.</td>
+       <td><a href="tc-612.jpeg">TC-612</a></td>
+    </tr>
+         <tr>
+      <th scope="row">13</th>
+      <td>TC-613</td>
+      <td>AWS/ASME A5.4 E 309L-15</td>
+      <td>asic coating of stainless steel electrode 309L stainless steel has outstanding welding performance for vertical and overhead position.</td>
+       <td><a href="tc-613.jpeg">TC-613</a></td>
+    </tr>
+          <tr>
+      <th scope="row">14</th>
+      <td>TC-614</td>
+      <td>AWS/ASME A5.4 E 310-16</td>
+      <td>Lime titanium oxide type electrode welding of 25% Cr- 20% Ni elements to get good corrosion/heat resistance, better toughness than high hardening tendency 30% Cr steel.</td>
+       <td><a href="tc-614.jpeg">TC-614</a></td>
+    </tr>
+        <tr>
+      <th scope="row">15</th>
+      <td>TC-615</td>
+      <td>AWS/ASME A5.4 E 316-16</td>
+      <td>Lime titanium oxide type electrode for 316 stainless steel, deposited weld metal contain 18Cr-12Ni-2Mo elements with good heat corrosion and crack resistance.</td>
+       <td><a href="tc-615.jpeg">TC-615</a></td>
+    </tr>
+          <tr>
+      <th scope="row">16</th>
+      <td>TC-616</td>
+      <td>AWS/ASME A5.4 E 316L-16</td>
+      <td>low carbon electrode for welding Cr-Ni-Mo stainless steel.</td>
+       <<td><a href="tc-616.jpeg">TC-616</a></td>
+    </tr>
+          <tr>
+      <th scope="row">17</th>
+      <td>TC-617</td>
+      <td>AWS/ASME A5.4 E 316L-15</td>
+      <td>Basic stainless steel electrode suitable for welding of high acid and high resistance electrode.</td>
+       <td><a href="tc-617.jpeg">TC-617</a></td>
+    </tr>
+        <tr>
+      <th scope="row">18</th>
+      <td>TC-618</td>
+      <td>AWS/ASME A5.4 E 317L-16</td>
+      <td>Welding of AISI 317L/316 which contain higher Mo to get better pitting, crevice corrosion and heat resistance. Weld metal contain 18Cr-12Ni-3.5-Mo</td>
+       <td><a href="#"></a></td>
+    </tr>
+            <tr>
+      <th scope="row">19</th>
+      <td>TC-619</td>
+      <td>AWS/ASME A5.4 E 347-16</td>
+      <td>Premium electrode for welding AISI 304L,309S,347,348 to 304L and their equivalents used in fertilizer, petrochemical and Pharmaceutical Industries.</td>
+       <td><a href="tc-619.jpeg">TC-619</a></td>
+    </tr>
+           <tr>
+      <th scope="row">20</th>
+      <td>TC-620</td>
+      <td>AWS/ASME A5.4 E 410-16</td>
+      <td>Martensite structure weld metal with good oxidation and corrosion resistance electrodes with 13-Cr martensite stainless steel such as AISI-410,420J,420J2 steel .</td>
+       <td><a href="tc-620.jpeg">TC-620</a></td>
+    </tr>
+          <tr>
+      <th scope="row">21</th>
+      <td>TC-621</td>
+      <td>AWS/ASME A5.4 E 2209-16</td>
+      <td>Lime Titanium Oxide electrode for duplex stainless steel with 22Cr-9Ni-3Mo-0.15N elements.</td>
+       <td><a href="tc-621.jpeg">TC-621</a></td>
+    </tr>
+     </tbody>
+</table>
+</body>
+</html>
+
+
+

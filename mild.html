@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Vipul Website -->
+  <title>Madoc </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #f4511e;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html#about">ABOUT</a></li>
+        <li><a href="index.html#services">MISSION</a></li>
+        <li><a href="index.html#portfolio">INDUSTRIES</a></li>
+        <li><a href="index.html#pricing">PRODUCTS</a></li>
+        <li><a href="index.html#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Madoc Engineering Company</h1> 
+  <p>We specialize in Welding Equipments</p> 
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Sign In</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+
+<b><h1 style="text-align:center;">Mild & High Tensile Strength Steel Electrodes</h1></b>
+<!-----table----->
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Seriel No.</th>
+      <th scope="col">Product Code</th>
+      <th scope="col">Aws</th>
+      <th scope="col">Description</th>
+       <th scope="col">catalogue</th>
+    </tr>
+  </thead>
+  <tbody>
+     <tr>
+      <th scope="row">1</th>
+      <td>TC-400</td>
+      <td>AWS/ASME A5.1 E6010</td>
+      <td>TC-400 is a high cellulose coated electrode to achieve deep penetration into the base metal.</td>
+       <td><a href="tc-400.jpg">TC-400</a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>TC-401</td>
+      <td>AWS/ASME A5.1 E6013</td>
+      <td>Rutile based medium coated all position high strength electrode for welding mild steels and carbon steels. </td>
+              <td><a href="tc-401.jpg">TC-401</a></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>TC-402</td>
+      <td>AWS/ASME A5.1 E7018</td>
+      <td>A heavy coated low hydrogen premium iron powder all positioned electrode for welding low, medium and high carbon steels. </td>
+          <td><a href="tc-402.jpg">TC-402</a></td>
+   </tr>
+            <tr>
+      <th scope="row">4</th>
+      <td>TC-403</td>
+      <td>AWS/ASME A5.1 E6011</td>
+      <td>TC-403 high cellulose coated electrode provide excellent arc stability increase ductility, high deposition efficency and low spatter.</td>
+       <td><a href="tc-403.jpg">TC-403</a></td>
+    </tr>
+    
+          <tr>
+      <th scope="row">5</th>
+      <td>TC-404</td>
+      <td>AWS/ASME A5.1 E6012</td>
+      <td>TC-404 is high titanium coated electrode developed for thin sections and poor fitup joints.</td>
+       <td><a href="tc-404.jpg">TC-404</a></td>
+    </tr>
+             <tr>
+      <th scope="row">6</th>
+      <td>TC-405</td>
+      <td>AWS/ASME A5.1 E6022</td>
+      <td>.</td>
+      <td><a href="tc-405.jpg">TC-405</a></td>
+    </tr>
+           <tr>
+      <th scope="row">7</th>
+      <td>TC-406</td>
+      <td>AWS/ASME A5.1 E7010-P1</td>
+      <td>TC-406 is a high cellulose electrode developed specially for welding  pipelines.</td>
+      <td><a href="tc-406.jpg">TC-406</a></td>
+    </tr>
+          <tr>
+      <th scope="row">8</th>
+      <td>TC-407</td>
+      <td>AWS/ASME A5.1 E7014</td>
+      <td>TC-407 is an iron powder rutile type electrode designed to operate at high speed with greater deposition efficency. </td>
+              <td><a href="tc-407.jpg">TC-407</a></td>
+    </tr>
+             
+         <tr>
+      <th scope="row">9</th>
+      <td>TC-408</td>
+      <td>AWS/ASME A5.1 E7016</td>
+      <td>TC-408 is a low hydrogen, all positioned electrode used for welding heavy duty steel structures and plates. </td>
+              <td><a href="tc-408.jpg">TC-408</a></td>
+    </tr>
+                 <tr>
+      <th scope="row">10</th>
+      <td>TC-409</td>
+      <td>AWS/ASME A5.1 E7016</td>
+      <td>TC-409 is a low hydrogen with Mo electrode used for welding carbon - molybdenum steels which are subjected to temperatures as high as 1000*F. </td>
+              <td><a href="tc-409.jpg">TC-409</a></td>
+    </tr>
+                <tr>
+      <th scope="row">11</th>
+      <td>TC-410</td>
+      <td>AWS/ASME A5.1 E7024</td>
+      <td>TC-410 is an iron powder, ritile coated electrode designed for high speed, single pass horizintal and flat fillet welding of mild steel. </td>
+             <td><a href="tc-410.jpg">TC-410</a></td>
+    </tr>
+              <tr>
+      <th scope="row">12</th>
+      <td>TC-411</td>
+      <td>AWS/ASME A5.5 E9018-D1</td>
+      <td>Premium basic coated electrode for low hydrogen type electrode for welding of high strength  steels. </td>
+              <td><a href="tc-411.jpg">TC-411</a></td>
+    </tr>
+         <tr>
+      <th scope="row">13</th>
+      <td>TC-412</td>
+      <td>AWS/ASME A5.5 E10016-G</td>
+      <td>TC-412 is low hydrogen type covered electrode for 690N/mm2 grade high tensile strength steel. </td>
+              <td><a href="tc-412.jpg">TC-412</a></td>
+    </tr>
+          <tr>
+      <th scope="row">14</th>
+      <td>TC-413</td>
+      <td>AWS/ASME A5.5 E10018-D2</td>
+      <td>Premium basic electrode with low hydrogen electrode for welding Q&T steels. </td>
+              <td><a href="tc-413.jpg">TC-413</a></td>
+    </tr>
+        <tr>
+      <th scope="row">15</th>
+      <td>TC-414</td>
+      <td>AWS/ASME A5.5 E11018-M</td>
+      <td>Premium basic extra low hydrogen electrode for high tensile applications. </td>
+             <td><a href="tc-414.jpg">TC-414</a></td>
+   
+     </tbody>
+</table>
+</body>
+</html>
